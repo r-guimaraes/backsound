@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BackSound</title>
+</head>
+<body>
+
+<div class="tradebitcoin container">
+    <div class="col-md-12 text-center main">
+      <h3>BackSound</h3>
+
+        <p>Gerencie as músicas que vão rolar no seu ambiente</p>
+
+      <div class="col-md-12">
+
+        <div class="col-md-6 login-box">
+
+        <%- if user_signed_in? %>
+            <div class="welcome"> Bem vindo, <strong><%= current_user.email %></strong> </div>
+
+            <%= link_to 'Veja seu perfil', "users/#{current_user.id}" %>
+
+            <br>
+
+            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+            
+        <%- else %>
+            <p>Para organizar sua playlist, faça seu <%= link_to 'login', user_session_path %></p>
+            
+    
+        <% end -%>
+
+        </div>
+
+      </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
