@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BackSound - O melhor DJ é todo mundo</title>
+    <title>BackSound - <%= @slogan %></title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csp_meta_tag %>
@@ -13,6 +13,11 @@
     <%= render 'menu' %>
     <main role="main" class="backsound-wrapper container">
       <%= yield %>
-    </main>  
+    </main>
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; BackSound 2018 - <%= @slogan %> </p>
+      </div>
+    </footer>
   </body>
 </html>
