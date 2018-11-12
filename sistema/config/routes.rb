@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get "como_funciona", to: "home#como_funciona"
   get "sobre", to: "home#sobre"
   get "contato", to: "home#contato"
+  get "planos", to: "home#planos"
 end

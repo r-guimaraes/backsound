@@ -23,17 +23,31 @@
         }
       }
     }
-  }
+} // backsound-wrapper
+
+footer {
+  margin-top: 20px;
+}
   
-  .footer {
-    a {
-      color: dodgerblue !important;
+.footer {
+  a {
+    color: dodgerblue !important;
+  }
+}
+
+.main-template-tradebitcoin {
+  text-align: center;
+  a {
+    color: lightskyblue;
+  }
+}
+
+.funcionamento {
+  margin-top: 90px;
+
+  .col-md-12 {
+    div {
+      display: inline-block;
     }
   }
-  
-  .main-template-tradebitcoin {
-    text-align: center;
-    a {
-      color: lightskyblue;
-    }
-  }
+}

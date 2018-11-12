@@ -9,5 +9,8 @@ class HomeController < ApplicationController
     end
   
     def contato
-    end    
+    end
+
+    def planos
+    end
 end
