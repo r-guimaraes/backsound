@@ -5,11 +5,9 @@ class HomeController < ApplicationController
     def sobre
     end
   
-    def ajuda
+    def como_funciona
     end
   
     def contato
-    end
-    
-  end
-  
+    end    
+end

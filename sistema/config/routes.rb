@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root to: "home#index"
+
+  get "como_funciona", to: "home#como_funciona"
+  get "sobre", to: "home#sobre"
+  get "contato", to: "home#contato"
 end
