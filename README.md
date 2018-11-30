@@ -1,2 +1,4 @@
 # backsound
-Versão inicial - Website Projeto BackSound
+Website Projeto BackSound
+
+Projeto completo dentro da pasta 'sistema'
