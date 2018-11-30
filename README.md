@@ -1,4 +1,12 @@
 # backsound
 Website Projeto BackSound
 
-Projeto completo dentro da pasta 'sistema'
+Projeto completo dentro da pasta 'sistema'.
+
+### Montando ambiente
+- Para executar o sistema principal, certifique-se que tenha o Ruby on Rails instalado corretamente em sua máquina.
+- `cd sistema`
+- `bundle install` (instale as dependências)
+- `rake db:migrate` (migre o banco de dados)
+- `rails s` (start o server interno do rails)
+- Acesse localhost:3000
