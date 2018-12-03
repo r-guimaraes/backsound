@@ -27,7 +27,7 @@
             <% @playlists.each do |playlist| %>
               <tr>
                 <td><%= playlist.name %></td>
-                <td><%= playlist.picture %></td>
+                <td><%= image_tag playlist.picture %></td>
                 <td><%= playlist.description %></td>
                 <td><%= playlist.ad %></td>
                 <td><%= playlist.user.name %></td>
