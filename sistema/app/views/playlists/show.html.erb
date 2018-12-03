@@ -34,7 +34,7 @@
         <%= @playlist.user.email %>
       </p>
 
-      <%= link_to 'Edit', edit_playlist_path(@playlist) %> |
-      <%= link_to 'Back', playlists_path %>
+      <%= link_to "Editar #{@playlist.name}", edit_playlist_path(@playlist), class: ["btn btn-primary btn-sm"] %>
+      <%= link_to 'Voltar', playlists_path, class: ["btn btn-light"] %>
     </div>
 </div>

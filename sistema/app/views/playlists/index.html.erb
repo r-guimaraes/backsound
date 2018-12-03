@@ -9,17 +9,16 @@
     <div class="col-lg-9 mb-4">      
       <p id="notice"><%= notice %></p>
 
-        <h1>Minhas Playlists</h1>
+        <h3>Minhas Playlists</h3>
 
         <table>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Picture</th>
-              <th>Description</th>
-              <th>Ad</th>
-              <th>User</th>
-              <th colspan="3"></th>
+              <th>Nome</th>
+<!--              <th>Picture</th>-->
+              <th>Descrição</th>
+              <th>Anúncio</th>
+              <th colspan="3">Ações</th>
             </tr>
           </thead>
 
@@ -27,13 +26,12 @@
             <% @playlists.each do |playlist| %>
               <tr>
                 <td><%= playlist.name %></td>
-                <td><%= image_tag playlist.picture %></td>
+<!--                <td><%#= image_tag playlist.picture %></td>-->
                 <td><%= playlist.description %></td>
                 <td><%= playlist.ad %></td>
-                <td><%= playlist.user.name %></td>
-                <td><%= link_to 'Ver +', playlist %></td>
+                <td><%= link_to 'Ver', playlist %></td>
                 <td><%= link_to 'Editar', edit_playlist_path(playlist) %></td>
-                <td><%= link_to 'Deletar', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to 'Deletar', playlist, method: :delete, data: { confirm: 'Deletar esta playlist?' } %></td>
               </tr>
             <% end %>
           </tbody>
@@ -41,6 +39,6 @@
 
         <br>
 
-        <%= link_to 'New Playlist', new_playlist_path %>
+        <%= link_to "Nova Playlist", new_playlist_path, class: ["btn btn-info btn-sm"] %>
     </div>
 </div>

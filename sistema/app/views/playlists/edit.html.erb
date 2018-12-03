@@ -7,11 +7,12 @@
     </div>
     <!-- Content Column -->
     <div class="col-lg-9 mb-4">      
-      <h1>Editando Playlist</h1>
+      <h3>Edite sua Playlist</h3>
 
-		<%= render 'form', playlist: @playlist %>
+      <%= render 'form', playlist: @playlist %>
 
-		<%= link_to 'Show', @playlist %> |
-		<%= link_to 'Back', playlists_path %>
+      <%= link_to 'Ver', @playlist, class: ["btn btn-info"] %> |
+      <%= link_to 'Voltar', playlists_path, class: ["btn btn-light"] %>
+
     </div>
 </div>

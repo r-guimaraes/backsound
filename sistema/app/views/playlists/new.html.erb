@@ -1,16 +1,16 @@
-<%= render partial: 'layouts/breadcrumb', locals: { current_title: 'Crie sua nova playlist' } %>
+<%= render partial: 'layouts/breadcrumb', locals: {current_title: 'Crie sua nova playlist'} %>
 
 <div class="row">
-    <!-- Sidebar Column -->
-    <div class="col-lg-3 mb-4">
-        <%= render partial: 'layouts/menu_admin' %>
-    </div>
-    <!-- Content Column -->
-    <div class="col-lg-9 mb-4">      
-      <h1>Criar Playlist</h1>
+  <!-- Sidebar Column -->
+  <div class="col-lg-3 mb-4">
+    <%= render partial: 'layouts/menu_admin' %>
+  </div>
+  <!-- Content Column -->
+  <div class="col-lg-9 mb-4">
+    <h1>Criar Playlist</h1>
 
-	 <%= render 'form', playlist: @playlist %>
+    <%= render 'form', playlist: @playlist %>
 
-	 <%= link_to 'Back', playlists_path %>
-    </div>
+    <%= link_to 'Voltar', playlists_path %>
+  </div>
 </div>
