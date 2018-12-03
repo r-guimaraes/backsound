@@ -1,19 +1,12 @@
 <%- if (user_signed_in?) %>
 
-    <%= render partial: 'layouts/breadcrumb', locals: { current_title: 'Minha Conta' } %>
-    
+<%= render partial: 'layouts/breadcrumb', locals: { current_title: 'Minha Conta' } %>
+
 <div class="row">
     <!-- Sidebar Column -->
     <div class="col-lg-3 mb-4">
-      <div class="list-group">
-        <a href="<%= user_path %>" class="list-group-item">Home</a>
-        <a href="<%= edit_user_registration_path %>" class="list-group-item">Editar Meus Dados</a>
-        <a href="<%= playlists_path %>" class="list-group-item">Minhas Playlists</a>
-        <a href="#" class="list-group-item">Minhas Configurações</a>
-        <a href="#" class="list-group-item">Seguidores</a>
-        <a href="#" class="list-group-item">Estatísticas</a>
+        <%= render partial: 'layouts/menu_admin' %>
     </div>
-</div>
 <!-- Content Column -->
 <div class="col-lg-9 mb-4">
   <h2>Bem vindo, <%= current_user.email %></h2>
