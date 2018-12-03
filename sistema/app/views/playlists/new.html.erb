@@ -1,5 +1,16 @@
-<h1>New Playlist</h1>
+<%= render partial: 'layouts/breadcrumb', locals: { current_title: 'Cria uma nova playlist' } %>
 
-<%= render 'form', playlist: @playlist %>
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-lg-3 mb-4">
+        <%= render partial: 'layouts/menu_admin' %>
+    </div>
+    <!-- Content Column -->
+    <div class="col-lg-9 mb-4">      
+      <h1>Criar Playlist</h1>
 
-<%= link_to 'Back', playlists_path %>
+	 <%= render 'form', playlist: @playlist %>
+
+	 <%= link_to 'Back', playlists_path %>
+    </div>
+</div>

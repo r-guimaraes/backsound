@@ -1,25 +1,26 @@
 <%- if (user_signed_in?) %>
 
-<%= render partial: 'layouts/breadcrumb', locals: { current_title: 'Minha Conta' } %>
+    <%= render partial: 'layouts/breadcrumb', locals: { current_title: 'Minha Conta' } %>
 
-<div class="row">
-    <!-- Sidebar Column -->
-    <div class="col-lg-3 mb-4">
-        <%= render partial: 'layouts/menu_admin' %>
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-lg-3 mb-4">
+            <%= render partial: 'layouts/menu_admin' %>
+        </div>
+        <!-- Content Column -->
+        <div class="col-lg-9 mb-4">
+          <h2>Bem vindo, <%= current_user.email %></h2>
+          <p>
+            Aqui você pode ver suas playlists criadas, editar os dados do seu estabelecimento,
+            ver quais os seguidores das suas playlists, e visualizar importantes dados estatísticos
+            que você já conseguiu engajar com a BackSound.
+            <br><br>
+            Conte conosco para entreter seus clientes de maneira divertida, e impulsionar o seu negócio.
+            <br><br>
+
+                <%= link_to "Criar Playlist", new_playlist_path, class: ["btn btn-info btn-sm"] %>
+            </p>
+        </div>
     </div>
-<!-- Content Column -->
-<div class="col-lg-9 mb-4">
-  <h2>Bem vindo, <%= current_user.email %></h2>
-  <p>
-    Aqui você pode ver suas playlists criadas, editar os dados do seu estabelecimento,
-    ver quais os seguidores das suas playlists, e visualizar importantes dados estatísticos
-    que você já conseguiu engajar com a BackSound.
-    <br><br>
-    Conte conosco para entreter seus clientes de maneira divertida, e impulsionar o seu negócio.
-    <br><br>
-
-    <%= link_to "Criar Playlist", new_playlist_path, class: ["btn btn-info btn-sm"] %>
-</p>
-</div>
-</div>
+    
 <%- end %>
