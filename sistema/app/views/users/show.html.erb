@@ -1,7 +1,7 @@
 <%- if (user_signed_in?) %>
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
-      <a href="/">Home</a>
+      <a href="<%= user_path %>">Home</a>
     </li>
     <li class="breadcrumb-item active">Minha Conta</li>
   </ol>
@@ -10,9 +10,9 @@
     <!-- Sidebar Column -->
     <div class="col-lg-3 mb-4">
       <div class="list-group">
-        <a href="/" class="list-group-item">Home</a>
+        <a href="<%= user_path %>" class="list-group-item">Home</a>
         <a href="<%= edit_user_registration_path %>" class="list-group-item">Editar Meus Dados</a>
-        <a href="#" class="list-group-item">Minhas Playlists</a>
+        <a href="<%= playlists_path %>" class="list-group-item">Minhas Playlists</a>
         <a href="#" class="list-group-item">Minhas Configurações</a>
         <a href="#" class="list-group-item">Seguidores</a>
         <a href="#" class="list-group-item">Estatísticas</a>
@@ -27,10 +27,9 @@
         que você já conseguiu engajar com a BackSound.
         <br><br>
         Conte conosco para entreter seus clientes de maneira divertida, e impulsionar o seu negócio.
-
         <br><br>
 
-        <button type="button" class="btn btn-info">Criar Playlist</button>
+        <%= link_to "Criar Playlist", new_playlist_path, class: ["btn btn-info btn-sm"] %>
       </p>
     </div>
   </div>
