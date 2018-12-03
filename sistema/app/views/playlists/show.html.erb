@@ -1,29 +1,40 @@
-<p id="notice"><%= notice %></p>
+<%= render partial: 'layouts/breadcrumb', locals: { current_title: "Playlist #{@playlist.name}" } %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @playlist.name %>
-</p>
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-lg-3 mb-4">
+        <%= render partial: 'layouts/menu_admin' %>
+    </div>
+    <!-- Content Column -->
+    <div class="col-lg-9 mb-4">      
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Picture:</strong>
-  <%= @playlist.picture %>
-</p>
+      <p>
+        <strong>Nome:</strong>
+        <%= @playlist.name %>
+      </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @playlist.description %>
-</p>
+      <p>
+        <strong>Imagem de Capa:</strong>
+        <%= @playlist.picture %>
+      </p>
 
-<p>
-  <strong>Ad:</strong>
-  <%= @playlist.ad %>
-</p>
+      <p>
+        <strong>Descrição:</strong>
+        <%= @playlist.description %>
+      </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @playlist.user %>
-</p>
+      <p>
+        <strong>Propaganda? <i><small>(opcional)</small></i></strong>
+        <%= @playlist.ad %>
+      </p>
 
-<%= link_to 'Edit', edit_playlist_path(@playlist) %> |
-<%= link_to 'Back', playlists_path %>
+      <p>
+        <strong>Dono:</strong>
+        <%= @playlist.user.email %>
+      </p>
+
+      <%= link_to 'Edit', edit_playlist_path(@playlist) %> |
+      <%= link_to 'Back', playlists_path %>
+    </div>
+</div>
