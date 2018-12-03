@@ -30,10 +30,10 @@
                 <td><%= playlist.picture %></td>
                 <td><%= playlist.description %></td>
                 <td><%= playlist.ad %></td>
-                <td><%= playlist.user %></td>
-                <td><%= link_to 'Show', playlist %></td>
-                <td><%= link_to 'Edit', edit_playlist_path(playlist) %></td>
-                <td><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= playlist.user.name %></td>
+                <td><%= link_to 'Ver +', playlist %></td>
+                <td><%= link_to 'Editar', edit_playlist_path(playlist) %></td>
+                <td><%= link_to 'Deletar', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>
             <% end %>
           </tbody>
