@@ -14,10 +14,12 @@
         <%= @playlist.name %>
       </p>
 
-      <p>
-        <strong>Imagem de Capa:</strong>
-        <%= image_tag @playlist.picture %>
-      </p>
+      <%- unless @playlist.picture %>
+        <p>
+          <strong>Imagem de Capa:</strong>
+          <%= image_tag @playlist.picture %>
+        </p>
+      <% end %>
 
       <p>
         <strong>Descrição:</strong>

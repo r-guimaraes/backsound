@@ -56,7 +56,7 @@ class PlaylistsController < ApplicationController
   def destroy
     @playlist.destroy
     respond_to do |format|
-      format.html { redirect_to playlists_url, notice: 'Playlist was successfully destroyed.' }
+      format.html { redirect_to playlists_url, notice: 'Playlist deletada com sucesso!' }
       format.json { head :no_content }
     end
   end
