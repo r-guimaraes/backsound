@@ -36,6 +36,14 @@
         <%= @playlist.user.email %>
       </p>
 
+      <p>
+        <strong>Músicas:</strong>  
+        <% @playlist.musics.each do |m| %>
+          <%= m.name %>
+        <% end %>
+
+      </p>
+
       <%= link_to "Editar #{@playlist.name}", edit_playlist_path(@playlist), class: ["btn btn-primary btn-sm"] %>
       <%= link_to 'Voltar', playlists_path, class: ["btn btn-light"] %>
     </div>
