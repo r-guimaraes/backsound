@@ -23,6 +23,8 @@ class MusicsController < ApplicationController
         format.html { redirect_to @music, notice: 'Música adicionada com sucesso.' }
         format.json { render :show, status: :created, location: @music }
       else
+        puts "Erro ao salvar!!" 
+        puts @music.errors.full_messages
         format.html { render :new }
         format.json { render json: @music.errors, status: :unprocessable_entity }
       end
