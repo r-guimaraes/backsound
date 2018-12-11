@@ -44,5 +44,8 @@
 
   <div class="actions">
     <%= form.submit 'Salvar', class: ["btn btn-primary"] %>
+    <div class="float-right">
+      <%= link_to 'Cancelar', playlists_path, class: ["btn btn-light"] %>
+    </div>
   </div>
 <% end %>
