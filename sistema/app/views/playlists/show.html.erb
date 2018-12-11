@@ -14,7 +14,7 @@
         <%= @playlist.name %>
       </p>
 
-      <%- unless @playlist.picture %>
+      <%- if @playlist.picture.attached? %>
         <p>
           <strong>Imagem de Capa:</strong>
           <%= image_tag @playlist.picture %>
