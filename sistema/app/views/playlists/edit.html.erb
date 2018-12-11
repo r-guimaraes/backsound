@@ -7,10 +7,7 @@
     </div>
     <!-- Content Column -->
     <div class="col-lg-9 mb-4">      
-      <h3>Edite sua Playlist</h3>
-
+      <h3>Edite sua Playlist <small> | <%= link_to 'Ver', @playlist, class: ["btn btn-info btn-sm"] %> </small> </h3>
       <%= render 'form', playlist: @playlist %>
-      <br>
-      <%= link_to 'Ver', @playlist, class: ["btn btn-info"] %> 
     </div>
 </div>

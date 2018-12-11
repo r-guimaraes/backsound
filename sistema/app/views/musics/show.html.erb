@@ -1,24 +1,30 @@
-<p id="notice"><%= notice %></p>
+<%= render partial: 'layouts/breadcrumb', locals: { current_title: "Minhas músicas / #{@music.name}" } %>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @music.artist %>
-</p>
+<div class="row">
 
-<p>
-  <strong>Name:</strong>
-  <%= @music.name %>
-</p>
+  <div class="col-lg-3 mb-4"> <%= render partial: 'layouts/menu_admin' %> </div>
 
-<p>
-  <strong>Album:</strong>
-  <%= @music.album %>
-</p>
+  <div class="col-lg-9 mb-4">
 
-<p>
-  <strong>User:</strong>
-  <%= @music.user %>
-</p>
+    <p id="notice"><%= notice %></p>
+    <p>
+      <strong>Artista:</strong>
+      <%= @music.artist %>
+    </p>
 
-<%= link_to 'Edit', edit_music_path(@music) %> |
-<%= link_to 'Back', musics_path %>
+    <p>
+      <strong>Música:</strong>
+      <%= @music.name %>
+    </p>
+
+    <p>
+      <strong>Album:</strong>
+      <%= @music.album %>
+    </p>
+
+    <%= link_to 'Editar', edit_music_path(@music) %> |
+    <%= link_to 'Voltar', musics_path %>
+
+  </div>
+
+</div>
