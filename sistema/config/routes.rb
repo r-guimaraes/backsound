@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :musics
   root to: "home#index"
 
   get 'artists/index'
