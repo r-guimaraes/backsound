@@ -1,0 +1,31 @@
+<%= render partial: 'layouts/breadcrumb', locals: { current_title: 'Procurar bandas' } %>
+
+<div class="row">
+
+  <div class="col-lg-3 mb-4"> <%= render partial: 'layouts/menu_admin' %> </div>
+
+  <div class="col-lg-9 mb-4">
+
+    <h3 class="page-header">Procurar artista:</h3>
+    <%= form_tag buscar_bandas_url, method: "get", html: { class: "form" } do %>
+      <div class="form-group col-xs-4">
+        <%= text_field_tag(:artist_name, "", placeholder: "Procure por banda ou cantor(a)", class: "form-control") %>
+      </div>
+      <%= submit_tag "Buscar", class: "btn btn-info" %>
+    <% end %>
+
+    <br>
+
+    <%- if @artists %>
+      <h5 class="page-header">Artistas correspondentes a <%= params[:artist_name] %>:</h5>
+      <ul>
+        <% @artists.each do |artist| %>
+          <li><%= artist.name %> | <%= link_to "Ver mais", artist_path(artist.id) %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+
+  </div>
+
+</div>

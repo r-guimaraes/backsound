@@ -15,7 +15,6 @@
           <thead>
             <tr>
               <th>Nome</th>
-<!--              <th>Picture</th>-->
               <th>Descrição</th>
               <th>Anúncio</th>
               <th colspan="3">Ações</th>
@@ -26,7 +25,6 @@
             <% @playlists.each do |playlist| %>
               <tr>
                 <td><%= playlist.name %></td>
-<!--                <td><%#= image_tag playlist.picture %></td>-->
                 <td><%= playlist.description %></td>
                 <td><%= playlist.ad %></td>
                 <td><%= link_to 'Ver', playlist %></td>
