@@ -1,4 +1,4 @@
-<%= render partial: 'layouts/breadcrumb', locals: { current_title: 'Procurar bandas' } %>
+<%= render partial: 'layouts/breadcrumb', locals: { current_title: "Adicione músicas de #{@artist.name}" } %>
 
 <div class="row">
 
@@ -11,7 +11,11 @@
       <ul>
         <% album.tracks.each do |track| %>
           <li>
-            <strong><%= track.name %></strong> | <%= link_to "Adicionar", '#' %>
+            <strong><%= track.name %></strong> | 
+            <%= link_to "Adicionar", @music, remote: true, 
+                method: :post,
+                data: { params: { music: { artist: @artist.name, album: album.name, name: track.name, user_id: current_user.id} }.to_param } 
+                %>
           </li>
         <% end %>
       </ul>

@@ -27,7 +27,7 @@
           <td><%= music.album %></td>
           <td><%= link_to 'Ver', music %></td>
           <td><%= link_to 'Editar', edit_music_path(music) %></td>
-          <td><%= link_to 'Remover', music, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Remover', music, method: :delete, data: { confirm: 'Deletar essa música?' } %></td>
         </tr>
       <% end %>
       </tbody>
