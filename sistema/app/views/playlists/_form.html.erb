@@ -21,6 +21,13 @@
     <%= form.file_field :picture %>
   </div>
 
+  <% if playlist.picture.attached? %>
+    <i><small>Imagem atual</small></i>
+    <br>
+    <%= image_tag playlist.picture %>
+  <% end %>
+
+
   <div class="field">
     <%= form.label :descricao %>
     <%= form.text_area :description, class: "form-control", rows: 3 %>
