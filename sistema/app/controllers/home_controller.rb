@@ -3,6 +3,7 @@ class HomeController < ApplicationController
     end
   
     def sobre
+        @featured = Playlist.all().limit 3
     end
   
     def como_funciona
