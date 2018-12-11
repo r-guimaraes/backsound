@@ -1,28 +1,20 @@
 class PlaylistsController < ApplicationController
   before_action :set_playlist, only: [:show, :edit, :update, :destroy]
 
-  # GET /playlists
-  # GET /playlists.json
   def index
     @playlists = Playlist.where user_id: current_user.id
   end
 
-  # GET /playlists/1
-  # GET /playlists/1.json
   def show
   end
 
-  # GET /playlists/new
   def new
     @playlist = Playlist.new
   end
 
-  # GET /playlists/1/edit
   def edit
   end
 
-  # POST /playlists
-  # POST /playlists.json
   def create
     @playlist = Playlist.new(playlist_params)
 
@@ -37,8 +29,6 @@ class PlaylistsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /playlists/1
-  # PATCH/PUT /playlists/1.json
   def update
     respond_to do |format|
       if @playlist.update(playlist_params)
@@ -51,8 +41,6 @@ class PlaylistsController < ApplicationController
     end
   end
 
-  # DELETE /playlists/1
-  # DELETE /playlists/1.json
   def destroy
     @playlist.destroy
     respond_to do |format|
@@ -62,12 +50,10 @@ class PlaylistsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_playlist
       @playlist = Playlist.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def playlist_params
       params.require(:playlist).permit(:name, :picture, :description, :ad, :user_id)
     end
