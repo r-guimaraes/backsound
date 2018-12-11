@@ -3,12 +3,7 @@
         <small>O melhor DJ é todo mundo</small>
       </h1>
 
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="/">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Sobre a BackSound</li>
-      </ol>
+    <%= render partial: 'layouts/breadcrumb', locals: { current_title: "Sobre a BackSound", bread_home: '/' } %>
 
       <!-- Intro Content -->
       <div class="row">

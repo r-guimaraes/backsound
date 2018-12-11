@@ -1,6 +1,8 @@
+<% _home_url = user_path(current_user.id) if local_assigns[:bread_home].nil? %>
+
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-      <a href="<%= user_path current_user.id %>">Home</a>
+      <a href="<%= _home_url %>">Home</a>
   </li>
   <li class="breadcrumb-item active"> <%= current_title %> </li>
 </ol>
