@@ -20,7 +20,7 @@
       <h5 class="page-header">Artistas correspondentes a <%= params[:artist_name] %>:</h5>
       <ul>
         <% @artists.each do |artist| %>
-          <li><%= artist.name %> | <%= link_to "Ver mais", artist_path(artist.id) %></li>
+          <li><%= artist.name %> | <%= link_to "Ver músicas", artist_path(artist.id) %></li>
         <% end %>
       </ul>
     <% end %>

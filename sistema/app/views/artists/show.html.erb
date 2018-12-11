@@ -5,13 +5,13 @@
   <div class="col-lg-3 mb-4"> <%= render partial: 'layouts/menu_admin' %> </div>
 
   <div class="col-lg-9 mb-4">
-    <h1 class="page-header"><%= @artist.name %></h1>
+    <h1 class="page-header">Músicas de <%= @artist.name %></h1>
     <% @artist.albums(country: 'US').each do |album| %>
-      <h3><%= album.name %></h3>
+      <h4>Álbum: <%= album.name %></h4>
       <ul>
         <% album.tracks.each do |track| %>
           <li>
-            <%= track.name %>
+            <strong><%= track.name %></strong> | <%= link_to "Adicionar", '#' %>
           </li>
         <% end %>
       </ul>

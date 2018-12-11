@@ -24,10 +24,9 @@
           <tbody>
             <% @playlists.each do |playlist| %>
               <tr>
-                <td><%= playlist.name %></td>
+                <td width="20%"><%= link_to playlist.name, playlist %></td>
                 <td><%= playlist.description %></td>
                 <td><%= playlist.ad %></td>
-                <td><%= link_to 'Ver', playlist %></td>
                 <td><%= link_to 'Editar', edit_playlist_path(playlist) %></td>
                 <td><%= link_to 'Deletar', playlist, method: :delete, data: { confirm: 'Deletar esta playlist?' } %></td>
               </tr>
