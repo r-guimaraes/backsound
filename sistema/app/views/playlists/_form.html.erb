@@ -42,6 +42,14 @@
     <%= form.hidden_field :user_id, value: current_user.id %>
   </div>
 
+  <p>
+    <h5>Adicione suas músicas</h5>
+    <% @songs.each do |m| %>
+      <%= check_box_tag "playlist[music_ids][]", m.id %>
+      <%= m.name %> <br>
+    <% end %>
+  </p>
+
   <div class="actions">
     <%= form.submit 'Salvar', class: ["btn btn-primary"] %>
     <div class="float-right">

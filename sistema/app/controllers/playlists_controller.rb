@@ -1,8 +1,9 @@
 class PlaylistsController < ApplicationController
   before_action :set_playlist, only: [:show, :edit, :update, :destroy]
+  before_action :set_songs, only: [:show, :new, :edit]
 
   def index
-    @playlists = Playlist.where user_id: current_user.id
+    @playlists = Playlist.where user_id: _id_usuario
   end
 
   def show
@@ -50,11 +51,20 @@ class PlaylistsController < ApplicationController
   end
 
   private
+
+    def _id_usuario
+      current_user.id
+    end
+
     def set_playlist
       @playlist = Playlist.find(params[:id])
     end
 
+    def set_songs
+      @songs = Music.where user_id: _id_usuario
+    end
+
     def playlist_params
-      params.require(:playlist).permit(:name, :picture, :description, :ad, :user_id)
+      params.require(:playlist).permit(:name, :picture, :description, :ad, :user_id, music_ids: [])
     end
 end
