@@ -2,7 +2,7 @@ class MusicsController < ApplicationController
   before_action :set_music, only: [:show, :edit, :update, :destroy]
 
   def index
-    @musics = Music.where user_id: current_user.id
+    @musics = Music.where(user_id: current_user.id).where.not(uri: [nil, ""])
   end
 
   def show
@@ -23,7 +23,7 @@ class MusicsController < ApplicationController
         format.html { redirect_to @music, notice: 'Música adicionada com sucesso.' }
         format.json { render :show, status: :created, location: @music }
       else
-        puts "Erro ao salvar!!" 
+        puts "Erro ao adicionar nova música! Veja mais detalhes abaixo:"
         puts @music.errors.full_messages
         format.html { render :new }
         format.json { render json: @music.errors, status: :unprocessable_entity }
@@ -57,6 +57,6 @@ class MusicsController < ApplicationController
     end
 
     def music_params
-      params.require(:music).permit(:artist, :name, :album, :user_id)
+      params.require(:music).permit(:artist, :name, :album, :uri, :user_id)
     end
 end

@@ -1,9 +1,6 @@
-
-
 <%= render partial: 'layouts/breadcrumb', locals: { current_title: 'Editar música' } %>
 
 <div class="row">
-
   <div class="col-lg-3 mb-4"> <%= render partial: 'layouts/menu_admin' %> </div>
 
   <div class="col-lg-9 mb-4">
@@ -11,8 +8,6 @@
 
     <%= render 'form', music: @music %>
 
-    <%= link_to 'Ver', @music %> |
-    <%= link_to 'Ver minhas músicas', musics_path %>
+    <%= link_to 'Ver', @music %> | <%= link_to 'Ver minhas músicas', musics_path %>
   </div>
-
 </div>

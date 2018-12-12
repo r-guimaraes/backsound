@@ -7,15 +7,13 @@
   <div class="col-lg-9 mb-4">
     <h3 class="page-header">Músicas de <%= @artist.name %></h3>
     <% @artist.albums(country: 'US').each do |album| %>
-      <h5>Álbum: <%= album.name %></h5>
+      <h5> Álbum: <%= album.name %></h5>
       <ul>
         <% album.tracks.each do |track| %>
+          <% _music_params = {artist: @artist.name, album: album.name, name: track.name, uri: track.uri, user_id: current_user.id} %>
           <li>
-            <strong><%= track.name %></strong> | 
-            <%= link_to "Adicionar", @music, remote: true, 
-                method: :post,
-                data: { params: { music: { artist: @artist.name, album: album.name, name: track.name, user_id: current_user.id} }.to_param } 
-                %>
+            <%= track.name %> |
+            <%= link_to "Adicionar", @music, remote: true, method: :post, data: { params: { music: _music_params }.to_param } %>
           </li>
         <% end %>
       </ul>
