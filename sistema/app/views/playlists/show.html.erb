@@ -35,9 +35,11 @@
       </p>
 
       <p>
-        <strong>Músicas:</strong>  
+        <strong>Músicas desta playlist:</strong>
+        <br>
         <% @playlist.musics.each do |m| %>
-          <%= m.name %>
+          <%= m.artist %> - 
+          <%= m.name %> <br>
         <% end %>
 
       </p>
