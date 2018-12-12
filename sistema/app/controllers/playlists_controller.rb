@@ -3,7 +3,11 @@ class PlaylistsController < ApplicationController
   before_action :set_songs, only: [:show, :new, :edit]
 
   def index
-    @playlists = Playlist.where user_id: _id_usuario
+    if user_signed_in?
+      @playlists = Playlist.where user_id: _id_usuario
+    else
+      redirect_to root_path
+    end
   end
 
   def show
@@ -61,7 +65,9 @@ class PlaylistsController < ApplicationController
     end
 
     def set_songs
-      @songs = Music.where user_id: _id_usuario
+      if user_signed_in?
+        @songs = Music.where user_id: _id_usuario
+      end
     end
 
     def playlist_params
