@@ -14,8 +14,8 @@
 
       <%- if @playlist.picture.attached? %>
         <p>
-          <strong>Imagem de Capa:</strong>
-          <%= image_tag @playlist.picture %>
+          <strong>Imagem de Capa:</strong> <br>
+          <%= image_tag @playlist.picture, class: ["img-fluid rounded mx-auto img-thumbnail"], style: 'max-width: 220px'  %>
         </p>
       <% end %>
 
@@ -35,13 +35,14 @@
       </p>
 
       <p>
-        <strong>Músicas desta playlist:</strong>
-        <br>
-        <% @playlist.musics.each do |m| %>
-          <%= m.artist %> -
-          <%= m.name %> <br>
-        <% end %>
-
+        <strong> Músicas desta playlist: </strong>
+        <ul>
+          <% @playlist.musics.each do |m| %>
+            <li>
+              <%= m.artist %> - <%= m.name %>
+            </li>
+          <% end %>
+        </ul>
       </p>
 
       <%= link_to "Editar #{@playlist.name}", edit_playlist_path(@playlist), class: ["btn btn-primary btn-sm"] %>

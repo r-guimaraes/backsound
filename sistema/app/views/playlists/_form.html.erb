@@ -24,11 +24,11 @@
   <% if playlist.picture.attached? %>
     <i><small>Imagem atual</small></i>
     <br>
-    <%= image_tag playlist.picture, class: ["img-fluid rounded mx-auto d-block img-thumbnail"] %>
-    <br>
+    <%= image_tag playlist.picture, class: ["img-fluid rounded mx-auto img-thumbnail"], style: 'max-width: 280px' %>
   <% end %>
 
   <div class="field">
+    <br>
     <%= form.label 'Descrição' %>
     <%= form.text_area :description, class: "form-control", rows: 3 %>
   </div>
@@ -43,7 +43,6 @@
   </div>
 
   <p>
-
     <h5>Adicione as músicas</h5>
     <% @songs.each do |m| %>
     <%

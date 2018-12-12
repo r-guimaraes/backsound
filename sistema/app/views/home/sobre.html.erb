@@ -26,7 +26,7 @@
           <div class="col-lg-4 mb-4">
             <div class="card h-100 text-center">
               <%- if p.picture.attached? %>
-                  <%= image_tag p.picture, class: "card-img-top" %>
+                  <%= image_tag p.picture, class: "card-img-top", style: 'max-height: 220px' %>
               <% end %>
               <div class="card-body">
                 <h4 class="card-title"><%= p.name %></h4>
