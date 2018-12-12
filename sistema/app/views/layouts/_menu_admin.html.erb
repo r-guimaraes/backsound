@@ -1,8 +1,8 @@
 <div class="list-group">
 	<a href="<%= user_path current_user.id %>" class="list-group-item">Home</a>
-	<a href="<%= edit_user_registration_path %>" class="list-group-item">Editar Meus Dados</a>
 	<a href="<%= playlists_path %>" class="list-group-item">Minhas Playlists</a>
-	<a href="<%= musics_path %>" class="list-group-item">Minhas Músicas</a>
-	<a href="<%= buscar_bandas_url %>" class="list-group-item">Buscar Músicas</a>
-	<%= link_to 'Sair', destroy_user_session_path, method: :delete, class: ["list-group-item"] %>
+  <a href="<%= musics_path %>" class="list-group-item">Minhas Músicas</a>
+  <a href="<%= buscar_bandas_url %>" class="list-group-item">Buscar Músicas</a>
+  <a href="<%= edit_user_registration_path %>" class="list-group-item">Meu Perfil</a>
+  <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: ["list-group-item"] %>
 </div>
