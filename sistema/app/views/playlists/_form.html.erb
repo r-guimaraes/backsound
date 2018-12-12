@@ -43,9 +43,14 @@
   </div>
 
   <p>
-    <h5>Adicione suas músicas</h5>
+
+    <h5>Adicione as músicas</h5>
     <% @songs.each do |m| %>
-      <%= check_box_tag "playlist[music_ids][]", m.id %>
+    <%
+      _playlist_musics = playlist.musics.to_a.map { |d| d.id }
+      _check = _playlist_musics.include?(m.id) ? "checked" : false
+    %>
+      <%= check_box_tag "playlist[music_ids][]", m.id, _check %>
       <%= m.name %> <br>
     <% end %>
   </p>
