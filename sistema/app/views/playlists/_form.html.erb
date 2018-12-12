@@ -24,17 +24,17 @@
   <% if playlist.picture.attached? %>
     <i><small>Imagem atual</small></i>
     <br>
-    <%= image_tag playlist.picture %>
+    <%= image_tag playlist.picture, class: ["img-fluid rounded mx-auto d-block img-thumbnail"] %>
+    <br>
   <% end %>
 
-
   <div class="field">
-    <%= form.label :descricao %>
+    <%= form.label 'Descrição' %>
     <%= form.text_area :description, class: "form-control", rows: 3 %>
   </div>
 
   <div class="field">
-    <%= form.label :anuncio %>
+    <%= form.label 'Anúncio' %>
     <%= form.text_area :ad, class: "form-control", rows: 4, placeholder: "Aproveite esta área para fazer algum anúncio especial enquanto está rolando sua playlist" %>
   </div>
 
@@ -51,7 +51,7 @@
       _check = _playlist_musics.include?(m.id) ? "checked" : false
     %>
       <%= check_box_tag "playlist[music_ids][]", m.id, _check %>
-      <%= m.name %> <br>
+      <%= "#{m.artist} - #{m.name}" %> <br>
     <% end %>
   </p>
 

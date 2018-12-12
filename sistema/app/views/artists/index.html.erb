@@ -6,10 +6,10 @@
 
   <div class="col-lg-9 mb-4">
 
-    <h4 class="page-header">Encontre a banda/artista, e, em seguida, suas músicas:</h4>
+    <h4 class="page-header">Procure a banda ou artista que deseja adicionar</h4>
     <%= form_tag buscar_bandas_url, method: "get", html: { class: "form" } do %>
       <div class="form-group col-xs-4">
-        <%= text_field_tag(:artist_name, "", placeholder: "Procure por banda ou cantor(a)", class: "form-control") %>
+        <%= text_field_tag(:artist_name, "", placeholder: "Pesquisar por: ", class: "form-control") %>
       </div>
       <%= submit_tag "Buscar", class: "btn btn-info" %>
     <% end %>
