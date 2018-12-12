@@ -29,8 +29,10 @@
                   <%= image_tag p.picture, class: "card-img-top", style: 'max-height: 220px' %>
               <% end %>
               <div class="card-body">
-                <h4 class="card-title"><%= p.name %></h4>
-                <h6 class="card-subtitle mb-2 text-muted"> <a href=""><%= p.description %></a> </h6>
+                <h4 class="card-title">
+                  <a href="<%= playlist_url p.id %>"> <%= p.name %> </a>
+                </h4>
+                <h6 class="card-subtitle mb-2 text-muted"> <%= p.description %></h6>
                 <hr>
                 <p class="card-text"><strong> Anúncio especial</strong>
                   <%= p.ad %>
@@ -40,7 +42,12 @@
               <%- if p.musics.count > 0 %>
               <div class="card-footer">
                 <i>Tocando agora:</i> <br>
-                <a href="#"> <strong><%= "#{p.musics.first.artist}" %></strong><%= " - #{p.musics.first.name}" %> </a>
+                <% if p.musics.first.uri.nil? %>
+                  <a href="#"> <strong><%= "#{p.musics.first.artist}" %></strong><%= " - #{p.musics.first.name}" %> </a>
+                <% else %>
+                  <iframe src="https://embed.spotify.com/?uri=<%= p.musics.first.uri %>"
+                          width="300" height="80" frameborder="0" allowtransparency="true"> </iframe>
+              <% end %>
               </div>
               <% end %>
 
