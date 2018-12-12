@@ -1,5 +1,17 @@
-<h1>New Music</h1>
+<%= render partial: 'layouts/breadcrumb', locals: { current_title: 'Adicionar música' } %>
 
-<%= render 'form', music: @music %>
+<div class="row">
 
-<%= link_to 'Back', musics_path %>
+  <div class="col-lg-3 mb-4"> <%= render partial: 'layouts/menu_admin' %> </div>
+
+  <div class="col-lg-9 mb-4">
+
+    <h1>Adicionar música</h1>
+
+    <%= render 'form', music: @music %>
+
+    <%= link_to 'Voltar', musics_path %>
+
+  </div>
+
+</div>
