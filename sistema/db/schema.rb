@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_11_161743) do
+ActiveRecord::Schema.define(version: 2018_12_11_235414) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -43,6 +43,13 @@ ActiveRecord::Schema.define(version: 2018_12_11_161743) do
     t.integer "playlist_id"
     t.index ["playlist_id"], name: "index_musics_on_playlist_id"
     t.index ["user_id"], name: "index_musics_on_user_id"
+  end
+
+  create_table "musics_playlists", id: false, force: :cascade do |t|
+    t.integer "music_id", null: false
+    t.integer "playlist_id", null: false
+    t.index ["music_id", "playlist_id"], name: "index_musics_playlists_on_music_id_and_playlist_id"
+    t.index ["playlist_id", "music_id"], name: "index_musics_playlists_on_playlist_id_and_music_id"
   end
 
   create_table "playlists", force: :cascade do |t|
