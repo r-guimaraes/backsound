@@ -5,9 +5,9 @@
   <div class="col-lg-3 mb-4"> <%= render partial: 'layouts/menu_admin' %> </div>
 
   <div class="col-lg-9 mb-4">
-    <h1 class="page-header">Músicas de <%= @artist.name %></h1>
+    <h3 class="page-header">Músicas de <%= @artist.name %></h3>
     <% @artist.albums(country: 'US').each do |album| %>
-      <h4>Álbum: <%= album.name %></h4>
+      <h5>Álbum: <%= album.name %></h5>
       <ul>
         <% album.tracks.each do |track| %>
           <li>
