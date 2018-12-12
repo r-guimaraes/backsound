@@ -36,10 +36,14 @@
                   <%= p.ad %>
                 </p>
               </div>
+
+              <%- if p.musics.count > 0 %>
               <div class="card-footer">
                 <i>Tocando agora:</i> <br>
-                <a href="#">Jorge & Mateus - Mania</a>
+                <a href="#"> <strong><%= "#{p.musics.first.artist}" %></strong><%= " - #{p.musics.first.name}" %> </a>
               </div>
+              <% end %>
+
             </div>
           </div>
         <% end %>
