@@ -12,8 +12,9 @@
       <p id="notice"><%= notice %></p>
 
       <% if is_playlist_owner @playlist  %>
-        <p>
-          <strong> Token da sua playlist: </strong> <%= @playlist.token %>
+        <p class="alert alert-info" role="alert">
+          <strong> Token da sua playlist: </strong>
+          <span class="badge-pill badge-info"><%= @playlist.token %></span>
         </p>
       <% end %>
 
