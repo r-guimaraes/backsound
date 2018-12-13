@@ -4,5 +4,5 @@
   <a href="<%= musics_path %>" class="list-group-item">Minhas Músicas</a>
   <a href="<%= buscar_bandas_url %>" class="list-group-item">Buscar Músicas</a>
   <a href="<%= edit_user_registration_path %>" class="list-group-item">Meu Perfil</a>
-  <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: ["list-group-item"] %>
+  <%= link_to 'Sair', destroy_user_session_path, data: {confirm: 'Deseja fazer logout da sua conta?'}, method: :delete, class: ["list-group-item"] %>
 </div>
