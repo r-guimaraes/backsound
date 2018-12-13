@@ -22,6 +22,7 @@ class PlaylistsController < ApplicationController
 
   def create
     @playlist = Playlist.new(playlist_params)
+    @playlist.token = ('a'..'z').to_a.shuffle[0,7].join
 
     respond_to do |format|
       if @playlist.save
