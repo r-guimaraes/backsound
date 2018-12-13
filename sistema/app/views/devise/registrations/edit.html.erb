@@ -21,7 +21,7 @@
         <% end %>
 
         <div class="field">
-          <%= f.label "Altere sua senha" %> <i></i>
+          <%= f.label 'Crie uma nova senha' %> <i></i>
           <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "(Deixe em branco para não alterar)" %>
           <% if @minimum_password_length %>
             <em><small>mínimo de <%= @minimum_password_length %> caracteres</small></em>
@@ -29,7 +29,7 @@
         </div>
 
         <div class="field">
-          <%= f.label :confirmacao_senha %>
+          <%= f.label 'Confirme a nova senha' %>
           <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
         </div>
 
