@@ -11,35 +11,28 @@
     <div class="col-lg-9 mb-4">
       <p id="notice"><%= notice %></p>
 
-      <p>
-        <strong>Nome:</strong>
-        <%= @playlist.name %>
-      </p>
 
-      <%- if @playlist.picture.attached? %>
-        <p>
-          <strong>Imagem de Capa:</strong> <br>
-          <%= image_tag @playlist.picture, class: ["img-fluid rounded mx-auto img-thumbnail"], style: 'max-width: 220px'  %>
-        </p>
-      <% end %>
 
-      <p>
-        <strong>Descrição:</strong>
-        <%= @playlist.description %>
-      </p>
-
-      <p>
-        <strong>Propaganda? <i><small>(opcional)</small></i></strong>
-        <%= @playlist.ad %>
-      </p>
+      <div class="row">
+        <%- if @playlist.picture.attached? %>
+          <div class="col-lg-3">
+            <%= image_tag @playlist.picture, class: ["img-fluid rounded mx-auto img-thumbnail"] %>
+          </div>
+        <% end %>
+        <div class="col-lg-9">
+          <h3> <%= @playlist.name %> </h3>
+          <p> <small> <strong>Criada por:</strong> <i><%= @playlist.user.name %> </i> </small> </p>
+          <p> <%= @playlist.description %> </p>
+          <p>
+            <strong> Dica do chefe </strong> <br>
+            <%= @playlist.ad %>
+          </p>
+        </div>
+      </div>
 
       <p>
-        <strong>Dono:</strong>
-        <%= @playlist.user.email %>
-      </p>
-
-      <p>
-        <strong> Músicas desta playlist: </strong>
+      <hr>
+        <strong> Músicas </strong>
         <ul>
           <% @playlist.musics.each do |m| %>
             <li>
