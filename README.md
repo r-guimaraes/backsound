@@ -1,7 +1,7 @@
-# backsound
-Website Projeto BackSound
+# Sistema Backsound
+Website Projeto BackSound - feito em Ruby on Rails
 
-Projeto completo dentro da pasta 'sistema'.
+Executar o projeto à partir da pasta 'sistema'.
 
 ### Montando ambiente
 - Para executar o sistema principal, certifique-se que tenha o Ruby on Rails instalado corretamente em sua máquina.
