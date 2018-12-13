@@ -34,6 +34,11 @@
                 <h4 class="card-title">
                   <a href="<%= playlist_url p.id %>"> <%= p.name %> </a>
                 </h4>
+                <% if p.user.name %>
+                  <p>
+                    <small>por: <strong> <%= p.user.name %> </strong></small>
+                  </p>
+                  <% end %>
                 <h6 class="card-subtitle mb-2 text-muted"> <%= p.description %></h6>
                 <hr>
                 <p class="card-text"><strong> Anúncio especial</strong>
