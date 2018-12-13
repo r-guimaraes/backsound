@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  RSpotify::authenticate "client_id", "client_secret"
+  RSpotify::authenticate "de75b607b0ac4d0a9894a2535ea1b798", "f2b04c95501344d28a2d8e9eb3f5da7e"
 
   def index
     unless params[:artist_name].nil?
