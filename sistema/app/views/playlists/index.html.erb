@@ -1,16 +1,13 @@
 <%= render partial: 'layouts/breadcrumb', locals: { current_title: 'Minhas Playlists' } %>
 
 <div class="row">
-    <!-- Sidebar Column -->
     <div class="col-lg-3 mb-4">
         <%= render partial: 'layouts/menu_admin' %>
     </div>
-    <!-- Content Column -->
     <div class="col-lg-9 mb-4">      
       <p id="notice"><%= notice %></p>
 
         <h3>Minhas Playlists</h3>
-
         <table>
           <thead>
             <tr>
@@ -20,7 +17,6 @@
               <th colspan="3">Ações</th>
             </tr>
           </thead>
-
           <tbody>
             <% @playlists.each do |playlist| %>
               <tr>
@@ -33,9 +29,7 @@
             <% end %>
           </tbody>
         </table>
-
         <br>
-
         <%= link_to "Nova Playlist", new_playlist_path, class: ["btn btn-info btn-sm"] %>
     </div>
 </div>
