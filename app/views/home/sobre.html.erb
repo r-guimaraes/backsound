@@ -20,9 +20,12 @@
       </div>
       <!-- /.row -->
 
-      <hr>
-      <h3> Playlists em execução agora </h3>
-      <hr>
+      <%- if (@featured.count > 0) %>
+        <hr>
+        <h3> Playlists em execução agora </h3>
+        <hr>
+      <%- end %>
+      
       <div class="row">
         <%- @featured.each do |p| %>
           <div class="col-lg-4 mb-4">
