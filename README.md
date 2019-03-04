@@ -1,5 +1,5 @@
 # Sistema Backsound
-Website Projeto BackSound - feito em Ruby on Rails
+backsound's project
 
 ### Montando ambiente
 - Para executar o sistema, certifique-se que tenha o Ruby on Rails instalado corretamente em sua máquina.
