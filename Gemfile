@@ -61,3 +61,7 @@ gem 'rspotify'
 group :production do
     gem 'pg'
 end
+
+gem "railties", ">= 5.2.2.1"
+
+gem "actionview", ">= 5.2.2.1"
