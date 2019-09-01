@@ -1,10 +1,11 @@
 # Backsound Music - Faça seu som local com sua conta Spotify
 
-##### Necessário ter uma contas spotify premium
+### Dependências
+- Rails 5.2.1.
+- PostGreSQL
+- Ter uma conta Spotify Premium
 
-### Montando ambiente
-- Utilizando Rails 5.2.1.
-- Banco de dados PostGres
+#### Executando localmente
 - Para executar o sistema, certifique-se que tenha o Ruby on Rails instalado corretamente em sua máquina.
 - `bundle install` (instale as dependências)
 - `rake db:migrate` (migre o banco de dados)
