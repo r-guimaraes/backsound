@@ -1,4 +1,6 @@
-# Sistema Backsound
+# Backsound Music - Faça seu som local com sua conta Spotify
+
+##### Necessário ter uma contas spotify premium
 
 ### Montando ambiente
 - Utilizando Rails 5.2.1.
