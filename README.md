@@ -6,8 +6,7 @@
 - Ter uma conta Spotify Premium
 
 #### Executando localmente
-- Para executar o sistema, certifique-se que tenha o Ruby on Rails instalado corretamente em sua máquina.
-- `bundle install` (instale as dependências)
+- `bundle install` (instale as dependências do projeto)
 - `rake db:migrate` (migre o banco de dados)
-- `rails s` (start o server interno do rails)
-- Acesse localhost:3000
+- `rails s` (inicie o server interno do rails)
+- Acesse localhost:3000 em qualquer navegador
