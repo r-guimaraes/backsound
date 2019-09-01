@@ -45,6 +45,8 @@ gem 'mini_magick'
 
 gem 'rspotify'
 
+gem "nokogiri", ">= 1.10.4"
+
 group :production do
     gem 'pg'
 end
