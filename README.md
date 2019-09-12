@@ -2,7 +2,7 @@
 
 ### Dev dependencies
 - Rails 5.2.1.
-- PostGreSQL
+- PostgreSQL
 - Conta Spotify Premium
 
 #### Executando localmente
