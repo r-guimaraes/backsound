@@ -54,3 +54,5 @@ end
 gem "railties", ">= 5.2.2.1"
 
 gem "actionview", ">= 5.2.2.1"
+
+gem "loofah", ">= 2.3.1"
