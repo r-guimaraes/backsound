@@ -9,5 +9,3 @@
 - `bundle install` (instale as dependências do projeto)
 - `rake db:migrate` (migre o banco de dados)
 - `rails s` (inicie o server interno do rails)
-
-- Acesse localhost:3000 em qualquer navegador
